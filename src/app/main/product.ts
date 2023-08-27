@@ -27,7 +27,7 @@ export class Product {
       if (this.persons.length === 0) {
         return 0;
       }
-      return this.price / this.persons.length
+      return this.getSumPrice() / this.persons.length
     }
 
     getSumPrice(): number {

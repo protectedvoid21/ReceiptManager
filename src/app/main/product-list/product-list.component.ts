@@ -23,5 +23,9 @@ export class ProductListComponent {
     })
   }
 
+  getProductSumPrice(): number {
+    return this.products.reduce((sum, product) => sum + product.getSumPrice(), 0)
+  }
+
   protected readonly FormatUtils = FormatUtils;
 }
