@@ -1,0 +1,14 @@
+<table>
+  <thead>
+  <tr>
+    <th>Imię</th>
+    <th>Udział</th>
+  </tr>
+  </thead>
+  <tbody >
+  <tr *ngFor="let person of persons">
+    <td>{{ person.name }}</td>
+    <td>{{ FormatUtils.formatPrice(person.getSumCost()) }} zł</td>
+  </tr>
+  </tbody>
+</table>

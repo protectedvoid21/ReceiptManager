@@ -1,0 +1,23 @@
+<header>
+  <p class="main-title">Paragon Master</p>
+  <h4>Utwórz podliczenie poprzez dodanie produktów oraz przydział osób</h4>
+</header>
+
+<main>
+  <div class="forms-container">
+    <app-add-person-form (personAdded)="onPersonAdded($event)" class=""></app-add-person-form>
+
+    <app-add-product-form (productAdded)="onProductAdded($event)" class=""></app-add-product-form>
+  </div>
+
+  <app-person-list [persons]="persons" class="person-container"></app-person-list>
+
+  <app-product-list
+    [products]="products"
+    [persons]="persons"
+    (productCheckboxChanged)="onCheckboxProductChanged($event)"
+    class="table-container">
+  </app-product-list>
+</main>
+
+

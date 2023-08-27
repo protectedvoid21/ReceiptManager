@@ -1,0 +1,9 @@
+<div class="paper form">
+  <p>Dodaj osobę</p>
+  <p #validationMessage class="text-sm"></p>
+  <div class="form-group">
+    <label class="form-label">Imię</label> <br>
+    <input #nameInput type="text"> <br>
+  </div>
+  <button class="primary" id="add-person-button" (click)="submit()">Dodaj</button>
+</div>
