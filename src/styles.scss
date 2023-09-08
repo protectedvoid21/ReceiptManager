@@ -84,6 +84,7 @@ button {
 }
 
 input {
+  width: 100%;
   padding: 0.5em 1em;
   border-radius: 5px;
   border: 1px solid #ccc;
@@ -94,10 +95,6 @@ input {
 
 main {
   text-align: center;
-}
-
-.forms-container {
-  width: 30%;
 }
 
 .person-container {
@@ -136,4 +133,46 @@ table {
   height: 10px;
   padding: 0.5em 1em;
   border-bottom: 1px solid #ccc;
+}
+
+@media (max-width: 767px) {
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .table-container {
+    width: 100%;
+    padding: 5px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #ccc;
+
+    tbody tr:nth-child(odd) {
+      background-color: #eee;
+    }
+
+    tbody tr:hover {
+      background-color: #ddd;
+    }
+
+    thead tr th {
+      padding: 5px;
+      border-bottom: 1px solid #ccc;
+    }
+  }
+
+  input {
+    padding: 5px;
+  }
+
+  .paper {
+    padding: 5px;
+    margin: 5px;
+  }
 }
