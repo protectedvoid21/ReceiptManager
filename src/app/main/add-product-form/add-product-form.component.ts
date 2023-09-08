@@ -35,7 +35,7 @@ export class AddProductFormComponent {
       ValidatorView.showFailure(this.validationMessageLabel.nativeElement, "Nazwa produktu nie może być pusta");
       return false;
     }
-    if(Number.parseInt(this.priceInput.nativeElement.value) <= 0 || this.priceInput.nativeElement.value.length === 0) {
+    if(Number.parseFloat(this.priceInput.nativeElement.value) <= 0 || this.priceInput.nativeElement.value.length === 0) {
       ValidatorView.showFailure(this.validationMessageLabel.nativeElement, "Cena produktu musi być większa od 0");
       return false;
     }
