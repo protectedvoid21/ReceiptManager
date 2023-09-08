@@ -10,7 +10,6 @@ import {Product} from "../product";
 export class AddProductFormComponent {
   @ViewChild('nameInput') nameInput!: ElementRef<HTMLInputElement>;
   @ViewChild('priceInput') priceInput!: ElementRef<HTMLInputElement>;
-  @ViewChild('countInput') countInput!: ElementRef<HTMLInputElement>;
   @ViewChild('validationMessage') validationMessageLabel!: ElementRef<HTMLParagraphElement>;
 
   @Output() productAdded: EventEmitter<Product> = new EventEmitter<Product>();
@@ -23,12 +22,10 @@ export class AddProductFormComponent {
     const product = new Product(
       this.nameInput.nativeElement.value,
       Number.parseFloat(this.priceInput.nativeElement.value),
-      Number.parseInt(this.countInput.nativeElement.value)
     );
 
     this.nameInput.nativeElement.value = ""
     this.priceInput.nativeElement.value = "";
-    this.countInput.nativeElement.value = "";
 
     this.productAdded.emit(product)
   }
@@ -40,10 +37,6 @@ export class AddProductFormComponent {
     }
     if(Number.parseInt(this.priceInput.nativeElement.value) <= 0 || this.priceInput.nativeElement.value.length === 0) {
       ValidatorView.showFailure(this.validationMessageLabel.nativeElement, "Cena produktu musi być większa od 0");
-      return false;
-    }
-    if(Number.parseInt(this.countInput.nativeElement.value) <= 0 || this.countInput.nativeElement.value.length === 0) {
-      ValidatorView.showFailure(this.validationMessageLabel.nativeElement,"Ilość produktu musi być większa od 0");
       return false;
     }
     ValidatorView.showSuccess(this.validationMessageLabel.nativeElement,"Produkt został dodany!");

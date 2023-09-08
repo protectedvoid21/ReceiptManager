@@ -3,8 +3,6 @@
     <tr>
       <th>Produkt</th>
       <th>Cena</th>
-      <th>Ilość</th>
-      <th>Suma</th>
       <th>Osoby</th>
     </tr>
   </thead>
@@ -12,8 +10,6 @@
     <tr *ngFor="let product of products">
       <td>{{ product.name }}</td>
       <td>{{ FormatUtils.formatPrice(product.price) }} zł</td>
-      <td>{{ product.count }}</td>
-      <td>{{ FormatUtils.formatPrice(product.getSumPrice()) }} zł</td>
       <td>
         <div class="checkbox-container">
           <div *ngFor="let person of persons" class="person-checkbox">
@@ -26,9 +22,8 @@
       </td>
     </tr>
     <tr>
-      <td colspan="3"></td>
+      <td colspan="2"></td>
       <td>{{ FormatUtils.formatPrice(getProductSumPrice()) }} zł</td>
-      <td></td>
     </tr>
   </tbody>
 </table>

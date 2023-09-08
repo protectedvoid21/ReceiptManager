@@ -12,19 +12,19 @@ export class MainPageComponent {
   products: Product[] = []
 
   ngOnInit() {
-
+    this.seedSample()
   }
 
   private seedSample() {
-    this.products.push(new Product("Milk", 1.07, 1))
-    this.products.push(new Product("Rice", 1.59, 1))
-    this.products.push(new Product("Eggs", 3.14, 1))
-    this.products.push(new Product("Cheese", 12.60, 1))
-    this.products.push(new Product("Chicken Breasts", 9.40, 1))
-    this.products.push(new Product("Apples", 2.31, 1))
-    this.products.push(new Product("Tomato", 2.58, 1))
-    this.products.push(new Product("Potato", 1.75, 1))
-    this.products.push(new Product("Onion", 1.10, 1))
+    this.products.push(new Product("Milk", 1.07))
+    this.products.push(new Product("Rice", 1.59))
+    this.products.push(new Product("Eggs", 3.14))
+    this.products.push(new Product("Cheese", 12.60))
+    this.products.push(new Product("Chicken Breasts", 9.40))
+    this.products.push(new Product("Apples", 2.31))
+    this.products.push(new Product("Tomato", 2.58))
+    this.products.push(new Product("Potato", 1.75))
+    this.products.push(new Product("Onion", 1.10))
 
     this.persons.push(new Person("Alice"))
     this.persons.push(new Person("Bob"))
