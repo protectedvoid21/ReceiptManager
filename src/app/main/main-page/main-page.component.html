@@ -9,13 +9,13 @@
     <app-add-product-form (productAdded)="onProductAdded($event)" class=""></app-add-product-form>
   </div>
 
-  <app-person-list [persons]="persons" class="person-container"></app-person-list>
+  <app-person-list [persons]="persons" class="person-container paper"></app-person-list>
 
   <app-product-list
     [products]="products"
     [persons]="persons"
     (productCheckboxChanged)="onCheckboxProductChanged($event)"
-    class="table-container">
+    class="table-container paper">
   </app-product-list>
 </main>
 
