@@ -14,6 +14,11 @@ export class Product {
       this.persons.push(person)
     }
 
+    removeAllPersons() {
+      this.persons.forEach(p => p.removeProduct(this))
+      this.persons = []
+    }
+
     removePerson(person: Person) {
       let index = this.persons.indexOf(person)
       if(index != -1) {

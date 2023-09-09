@@ -35,6 +35,11 @@ export class MainPageComponent {
     this.products.push(product)
   }
 
+  onProductRemoved(product: Product) {
+    product.removeAllPersons()
+    this.products = this.products.filter(p => p !== product)
+  }
+
   onPersonAdded(person: Person) {
     this.persons.push(person)
   }

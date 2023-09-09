@@ -14,6 +14,7 @@ export class ProductListComponent {
   @Input() products: Product[] = []
 
   @Output() productCheckboxChanged: EventEmitter<CheckboxPersonProductModel> = new EventEmitter<CheckboxPersonProductModel>()
+  @Output() productRemoved: EventEmitter<Product> = new EventEmitter<Product>()
 
   onProductCheckboxChanged(product: Product, person: Person, event: any): void {
     this.productCheckboxChanged.emit({
@@ -21,6 +22,10 @@ export class ProductListComponent {
       product: product,
       checked: event.target.checked
     })
+  }
+
+  onProductRemoved(product: Product): void {
+    this.productRemoved.emit(product)
   }
 
   getProductSumPrice(): number {

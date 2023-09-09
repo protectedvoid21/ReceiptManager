@@ -15,6 +15,7 @@
     [products]="products"
     [persons]="persons"
     (productCheckboxChanged)="onCheckboxProductChanged($event)"
+    (productRemoved)="onProductRemoved($event)"
     class="table-container paper">
   </app-product-list>
 </main>

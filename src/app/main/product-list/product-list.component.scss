@@ -3,6 +3,18 @@
   justify-content: center;
 }
 
+table {
+  tbody tr:last-child {
+    border-top: 1px dashed #ccc;
+  }
+}
+
+.remove-icon {
+  color: #911;
+  cursor: pointer;
+  user-select: none;
+}
+
 .person-checkbox {
   margin: 4px;
   background-color: #EFEFEF;
