@@ -12,7 +12,7 @@ export class MainPageComponent {
   products: Product[] = []
 
   ngOnInit() {
-    this.seedSample()
+    
   }
 
   private seedSample() {
