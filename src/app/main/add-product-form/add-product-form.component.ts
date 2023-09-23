@@ -25,7 +25,9 @@ export class AddProductFormComponent {
     );
 
     this.nameInput.nativeElement.value = ""
-    this.priceInput.nativeElement.value = "";
+    this.priceInput.nativeElement.value = ""
+
+    this.nameInput.nativeElement.focus()
 
     this.productAdded.emit(product)
   }

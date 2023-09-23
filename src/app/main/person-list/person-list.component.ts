@@ -8,6 +8,7 @@ import {FormatUtils} from "../format-utils";
   styleUrls: ['./person-list.component.scss']
 })
 export class PersonListComponent {
-    @Input() persons: Person[] = []
-  protected readonly FormatUtils = FormatUtils;
+  @Input() persons: Person[] = []
+
+  protected readonly FormatUtils = FormatUtils
 }

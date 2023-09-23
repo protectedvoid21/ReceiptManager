@@ -1,0 +1,15 @@
+.group-header {
+  display: flex;
+  flex-direction: row;
+}
+
+.group-name {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.group-image {
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  margin-right: 10px;
+}
