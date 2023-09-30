@@ -18,7 +18,7 @@ export class MainPageComponent implements PersonObserver {
   }
 
   ngOnInit() {
-    this.seedSample()
+
   }
 
   private seedSample() {
