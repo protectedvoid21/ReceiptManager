@@ -2,17 +2,23 @@ import { Component } from '@angular/core';
 import {Person} from "../person";
 import {Product} from "../product";
 import {CheckboxPersonProductModel} from "../checkbox-person-product.model";
+import {ReceiptCacheService} from "../../core/services/receipt-cache.service";
+import {PersonObserver} from "../../core/PersonObserver";
 
 @Component({
   templateUrl: './main-page.component.html',
   styleUrls: ['./main-page.component.scss']
 })
-export class MainPageComponent {
+export class MainPageComponent implements PersonObserver {
   persons: Person[] = []
   products: Product[] = []
 
+  constructor(private receiptCacheService: ReceiptCacheService) {
+    this.receiptCacheService.addObservator(this)
+  }
+
   ngOnInit() {
-    
+    this.seedSample()
   }
 
   private seedSample() {
@@ -26,9 +32,9 @@ export class MainPageComponent {
     this.products.push(new Product("Potato", 1.75))
     this.products.push(new Product("Onion", 1.10))
 
-    this.persons.push(new Person("Alice"))
+    /*this.persons.push(new Person("Alice123123123"))
     this.persons.push(new Person("Bob"))
-    this.persons.push(new Person("Carol"))
+    this.persons.push(new Person("Carol"))*/
   }
 
   onProductAdded(product: Product) {
@@ -40,8 +46,8 @@ export class MainPageComponent {
     this.products = this.products.filter(p => p !== product)
   }
 
-  onPersonAdded(person: Person) {
-    this.persons.push(person)
+  onPersonsChanged(persons: Person[]): void {
+    this.persons = persons
   }
 
   onCheckboxProductChanged(personProductModel: CheckboxPersonProductModel) {
@@ -54,4 +60,5 @@ export class MainPageComponent {
       personProductModel.product.removePerson(personProductModel.person)
     }
   }
+
 }

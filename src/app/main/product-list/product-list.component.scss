@@ -4,6 +4,13 @@
 }
 
 table {
+  text-align: center;
+
+  tbody tr td:first-child {
+    text-align: left;
+    padding-left: 10px;
+  }
+
   tbody tr:last-child {
     border-top: 1px dashed #ccc;
   }
@@ -20,21 +27,23 @@ table {
   background-color: #EFEFEF;
   border-radius: 4px;
   border: 1px solid #D0D0D0;
-  overflow: auto;
   float: left;
+  transition: all 0.1s;
 
   &:hover {
-    background: red;
+    background: #91e1ff;
   }
 
   label {
     float: left;
-    width: 4.0em;
+    min-width: 4em;
+    width: auto;
 
     span {
       text-align: center;
-      padding: 3px 0px;
+      padding: 3px 10px;
       display: block;
+      cursor: pointer;
     }
 
     input {
@@ -42,9 +51,16 @@ table {
       top: -20px;
 
       &:checked + span {
-        background-color: #911;
+        background-color: #2196f3;
+        border-radius: 4px;
         color: #fff;
       }
     }
   }
+}
+
+.sum-price {
+  font-size: 1.2em;
+  font-weight: bold;
+  padding-top: 0.2em;
 }

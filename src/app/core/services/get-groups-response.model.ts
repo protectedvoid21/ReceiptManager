@@ -10,6 +10,7 @@ export interface GroupModel {
 }
 
 export interface GroupMemberModel {
+  id: number
   first_name: string
   last_name: string
 }

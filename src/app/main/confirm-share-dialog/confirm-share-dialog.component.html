@@ -1,0 +1,15 @@
+<dialog #confirmDialog>
+  <p>Potwierdzenie udostępnienia rozliczenia</p>
+  <span>Grupa: {{group?.name}} </span>
+  <div>
+    <ul>
+      <li *ngFor="let user of persons">
+        {{user.name}} - {{user.getSumCost().toFixed(2)}}zł
+      </li>
+    </ul>
+  </div>
+  <div>
+    <button (click)="cancel()">Anuluj</button>
+    <button (click)="shareReceipt()">Potwierdź</button>
+  </div>
+</dialog>

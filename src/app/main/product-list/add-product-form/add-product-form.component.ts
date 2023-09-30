@@ -1,6 +1,6 @@
 import {Component, ElementRef, EventEmitter, Output, ViewChild} from '@angular/core';
-import {ValidatorView} from "../validatorView";
-import {Product} from "../product";
+import {ValidatorView} from "../../validatorView";
+import {Product} from "../../product";
 
 @Component({
   selector: 'app-add-product-form',

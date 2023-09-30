@@ -1,24 +1,31 @@
 <dialog #shareDialog>
-  <button (click)="shareDialog.close()">Close</button>
+  <button (click)="shareDialog.close()">Zamknij</button>
   <div>
-    <h2>Groups</h2>
+    <h2 class="title">Grupy</h2>
     <div *ngIf="groupsResponse$ | async as groupsResponse">
       <div *ngFor="let group of groupsResponse.groups" class="paper">
 
         <div class="group-header">
-          <img class="group-image" [src]="group.avatar.small"/>
+          <div class="center-wh group-image-container">
+            <img class="group-image" [src]="group.avatar.small"/>
+          </div>
           <p class="group-name">{{group.name}}</p>
         </div>
 
-        <div>Group members</div>
+        <div>Członkowie grupy</div>
         <ul>
           <li *ngFor="let member of group.members">
             {{member.first_name}} {{member.last_name}}
           </li>
         </ul>
 
+        <div class="center-wh">
+          <button (click)="setGroup(group)">Ustaw</button>
+        </div>
       </div>
     </div>
   </div>
-  <p>Dialog!</p>
 </dialog>
+
+<app-confirm-share-dialog></app-confirm-share-dialog>
+

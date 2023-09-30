@@ -7,13 +7,14 @@ import { MainPageComponent } from './main/main-page/main-page.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PersonListComponent } from './main/person-list/person-list.component';
 import { ProductListComponent } from './main/product-list/product-list.component';
-import { AddPersonFormComponent } from './main/add-person-form/add-person-form.component';
-import { AddProductFormComponent } from './main/add-product-form/add-product-form.component';
-import { ShareReceiptDialogComponent } from './main/navbar/share-receipt-dialog/share-receipt-dialog.component';
+import { AddPersonFormComponent } from './main/person-list/add-person-form/add-person-form.component';
+import { AddProductFormComponent } from './main/product-list/add-product-form/add-product-form.component';
+import { SplitwiseDialogComponent } from './main/share-receipt-icon/share-receipt-dialog/splitwise-dialog.component';
 import { NavbarComponent } from './main/navbar/navbar.component';
 import { ThemeToggleComponent } from './main/navbar/theme-toggle/theme-toggle.component';
 import {HttpClientModule} from "@angular/common/http";
-import { ShareReceiptIconComponent } from './main/navbar/share-receipt-icon/share-receipt-icon.component';
+import { SplitwiseButtonComponent } from './main/share-receipt-icon/splitwise-button.component';
+import { ConfirmShareDialogComponent } from './main/confirm-share-dialog/confirm-share-dialog.component';
 
 @NgModule({
   declarations: [
@@ -23,10 +24,11 @@ import { ShareReceiptIconComponent } from './main/navbar/share-receipt-icon/shar
     ProductListComponent,
     AddPersonFormComponent,
     AddProductFormComponent,
-    ShareReceiptDialogComponent,
+    SplitwiseDialogComponent,
     NavbarComponent,
     ThemeToggleComponent,
-    ShareReceiptIconComponent
+    SplitwiseButtonComponent,
+    ConfirmShareDialogComponent
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,7 @@
 export interface CreateExpenseModel {
-  cost: number
-  groupId: string
+  cost: string
+  groupId: number
+  details: string
   description: string
   date: Date
   currencyCode: string
@@ -10,7 +11,7 @@ export interface CreateExpenseModel {
 }
 
 export interface UserExpenseModel {
-  id: number
+  userId: number
   paidShare: string
   owedShare: string
 }

@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./theme-toggle.component.scss']
 })
 export class ThemeToggleComponent {
-
+  toggleTheme() {
+    const isDarkTheme = localStorage.getItem('isDarkTheme') === 'true';
+    localStorage.setItem('isDarkTheme', (!isDarkTheme).toString());
+    document.documentElement.style.colorScheme = isDarkTheme ? 'light' : 'dark';
+  }
 }
