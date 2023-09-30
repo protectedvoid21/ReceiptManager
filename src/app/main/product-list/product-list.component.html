@@ -24,8 +24,8 @@
       <td class="remove-icon" (click)="onProductRemoved(product)"><span class="material-symbols-outlined">delete</span></td>
     </tr>
     <tr>
-      <td colspan="1"></td>
-      <td>{{ FormatUtils.formatPrice(getProductSumPrice()) }} zł</td>
+      <td class="sum-price" colspan="1">Suma</td>
+      <td class="sum-price">{{ FormatUtils.formatPrice(getProductSumPrice()) }} zł</td>
       <td colspan="1"></td>
     </tr>
   </tbody>

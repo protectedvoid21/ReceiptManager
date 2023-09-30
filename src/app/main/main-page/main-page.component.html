@@ -3,13 +3,17 @@
   <h4>Utwórz podliczenie poprzez dodanie produktów oraz przydział osób</h4>
 </header>
 
+<nav>
+  <app-navbar class="navbar"></app-navbar>
+</nav>
+
 <main>
   <div class="forms-container">
-    <app-add-person-form (personAdded)="onPersonAdded($event)" class=""></app-add-person-form>
+    <app-add-person-form class=""></app-add-person-form>
     <app-add-product-form (productAdded)="onProductAdded($event)" class=""></app-add-product-form>
   </div>
 
-  <app-person-list [persons]="persons" class="person-container paper"></app-person-list>
+  <app-person-list class="person-container paper"></app-person-list>
 
   <app-product-list
     [products]="products"

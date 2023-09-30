@@ -1,6 +1,7 @@
 import {Component, ElementRef, EventEmitter, Output, ViewChild} from '@angular/core';
-import {Person} from "../person";
-import {ValidatorView} from "../validatorView";
+import {Person} from "../../person";
+import {ValidatorView} from "../../validatorView";
+import {ReceiptCacheService} from "../../../core/services/receipt-cache.service";
 
 @Component({
   selector: 'app-add-person-form',
@@ -11,15 +12,18 @@ export class AddPersonFormComponent {
   @ViewChild('nameInput') nameInput!: ElementRef<HTMLInputElement>;
   @ViewChild('validationMessage') validationMessageLabel!: ElementRef<HTMLParagraphElement>;
 
-  @Output() personAdded: EventEmitter<Person> = new EventEmitter<Person>();
+  constructor(private receiptCacheService: ReceiptCacheService) {
+  }
 
   submit() {
     if (!this.validate()) {
-      return;
+      return
     }
 
-    this.personAdded.emit(new Person(this.nameInput.nativeElement.value));
-    this.nameInput.nativeElement.value = "";
+    const person = new Person(this.nameInput.nativeElement.value)
+    this.receiptCacheService.addPerson(person)
+
+    this.nameInput.nativeElement.value = ""
   }
 
   validate(): boolean {

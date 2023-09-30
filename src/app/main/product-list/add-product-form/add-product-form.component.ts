@@ -1,6 +1,6 @@
 import {Component, ElementRef, EventEmitter, Output, ViewChild} from '@angular/core';
-import {ValidatorView} from "../validatorView";
-import {Product} from "../product";
+import {ValidatorView} from "../../validatorView";
+import {Product} from "../../product";
 
 @Component({
   selector: 'app-add-product-form',
@@ -25,7 +25,9 @@ export class AddProductFormComponent {
     );
 
     this.nameInput.nativeElement.value = ""
-    this.priceInput.nativeElement.value = "";
+    this.priceInput.nativeElement.value = ""
+
+    this.nameInput.nativeElement.focus()
 
     this.productAdded.emit(product)
   }
