@@ -8,4 +8,4 @@ https://paragon-master.netlify.app
  Could create this as simple html,css,js app but I thought it will be a good opportunity to learn Angular
  
  Sample cutted of image of result
- ![image](https://github.com/protectedvoid21/ReceiptManager/assets/78810810/3e600fcb-28f0-459a-8fa2-f7038fe25aa4)
+![image](https://github.com/protectedvoid21/ReceiptManager/assets/78810810/2476292c-f4ba-481f-a03f-29f3c07353df)
