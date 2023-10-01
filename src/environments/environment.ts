@@ -1,3 +1,3 @@
 export const environment = {
-  apiUrl: 'https://paragonmaster.azurewebsites.net/splitwise/'
+  apiUrl: 'https://paragonmaster.azurewebsites.net/'
 };
